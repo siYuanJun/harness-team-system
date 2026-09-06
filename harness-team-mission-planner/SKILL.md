@@ -31,8 +31,7 @@ description: 为 Harness 多 Agent 团队体系生成里程碑任务指令文件
 - 没有 → 检查 `harness/` 下是否有可用团队源目录（如 ontology-dome-team、hermes-agent-team），列出让用户指定
 - 如果 `harness/` 下也没有合适的团队，或用户想为当前项目**新建团队** → 停止生成任务指令，明确提示用户：
   > 当前项目没有 Harness 团队。请先用团队搭建方法论创建团队：
-  > `harness/_methodology/team-building-methodology.md`
-  > （绝对路径：`/Users/siyuan/Documents/www/skills/ai-skills-prompt/harness/_methodology/team-building-methodology.md`）
+  > 见本仓库 `_methodology/team-building-methodology.md`
   > 按该方法论的 9 步流程搭建团队后，再回到本 Skill 生成任务指令。
 - 提取目标团队的角色名、职责、路由关系，生成时角色名必须和目标团队完全匹配
 

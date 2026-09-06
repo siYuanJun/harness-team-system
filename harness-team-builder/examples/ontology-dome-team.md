@@ -1,7 +1,7 @@
 # 成品案例：ontology-dome-team
 
-> 这是用 harness-team-builder 方法论搭建的第一个垂直团队，位于：
-> `/Users/siyuan/Documents/www/skills/ai-skills-prompt/harness/ontology-dome-team/`
+> 这是用 harness-team-builder 方法论搭建的第一个垂直团队，位于本仓库：
+> `ontology-dome-team/`
 
 ## 团队概况
 
@@ -32,15 +32,13 @@
 
 ## 项目副本
 
-该团队的项目副本（实际运行时）位于：
-`/Users/siyuan/Documents/www/siyuan-www/ontology-dome/.claude/`
+该团队的项目副本（实际运行时）部署到目标项目的 `.claude/` 目录下。
 
 副本比源目录多一行 `model: opus`（运行时模型指定），这是有意差异，不需要同步。
 
 ## 里程碑任务指令
 
-该团队的任务指令用 `harness-team-mission-planner` Skill 生成，位于：
-`/Users/siyuan/Documents/www/siyuan-www/ontology-dome/docs/internal/harness-m3/`
+该团队的任务指令用 `harness-team-mission-planner` Skill 生成，部署到目标项目的 `docs/internal/harness-Mx/` 目录下。
 
 ## 参考价值
 

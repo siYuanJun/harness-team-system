@@ -87,7 +87,7 @@ Ontology-Dome Team 要做的是**把本体工程的门槛打平**，让它变成
 
 ## 相关资源
 
-- 源项目：[ontology-dome](../../../../siyuan-www/ontology-dome/)
-- 领域知识库：[knowledge-base](../../../../siyuan-www/ontology-dome/knowledge-base/)
+- 源项目：ontology-dome（独立项目仓库，部署时将本团队复制到目标项目的 `.claude/` 目录）
+- 领域知识库：目标项目内 `knowledge-base/` 目录
 - 通用模板：Harness 团队组建提示词-通用模板
 - 参考团队：[hermes-agent-team](../hermes-agent-team/) · [prd-review-team](../prd-review-team/)
