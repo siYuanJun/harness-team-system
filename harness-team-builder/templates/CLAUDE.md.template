@@ -1,0 +1,91 @@
+# {{PROJECT_NAME}} · AI 团队协作规则
+
+> 本文件是 {{PROJECT_NAME}} 项目的 AI 协作入口。所有 AI 代理（Claude Code / 豆包 / 其他）进入本项目时优先读取。
+> 团队搭建日期：{{DATE}}
+> 团队规模：{{TEAM_SIZE}}（{{TEAM_LEVEL}}）
+
+---
+
+## 项目一句话目标
+
+{{PROJECT_GOAL}}
+
+---
+
+## 触发规则
+
+当用户指令包含以下关键词时，进入团队协作模式：
+
+- 规划 / 调度 / 总览 / 推进 / 分配 → orchestrator
+- 验收 / 测试 / 终验 / pass → acceptor
+- 写文档 / 博客 / 说明 → content-creator
+- 审稿 / 检查 / 合规 → content-reviewer
+- 产品 / PRD / 需求 / 方案 / 优先级 → pm
+- 沉淀 / 蒸馏 / 记下来 / 知识库 → knowledge-keeper
+- 收尾 / git / 环境 / 依赖 → engineer
+- 合并 / 冲突 / worktree → merge-engineer
+- 调研 / 查资料 / 竞品 → research-agent
+- 建模 / Schema / 算法 → modeling-agent
+- 模糊 / 跨多角色 → orchestrator 拆子任务分派
+
+---
+
+## 路由表
+
+| 触发词 | 路由到 | 角色文件 |
+|--------|--------|----------|
+| 规划/调度/总览 | {{TEAM}}-orchestrator | `.claude/agents/orchestrator.md` |
+| 工程/git/环境 | {{TEAM}}-engineer | `.claude/agents/engineer.md` |
+| 验收/测试 | {{TEAM}}-acceptor | `.claude/agents/acceptor.md` |
+| 产品/PRD/需求 | {{TEAM}}-pm | `.claude/agents/pm.md` |
+| 内容/文档 | {{TEAM}}-content-creator | `.claude/agents/content-creator.md` |
+| 审校/合规 | {{TEAM}}-content-reviewer | `.claude/agents/content-reviewer.md` |
+| 沉淀/知识 | {{TEAM}}-knowledge-keeper | `.claude/agents/knowledge-keeper.md` |
+| 合并/worktree | {{TEAM}}-merge-engineer | `.claude/agents/merge-engineer.md` |
+| 调研/资料 | {{TEAM}}-research-agent | `.claude/agents/research-agent.md` |
+| 建模/Schema | {{TEAM}}-modeling-agent | `.claude/agents/modeling-agent.md` |
+
+> 注：未选的角色不列出。实际路由表以选定的角色为准。
+
+---
+
+## 核心铁律
+
+1. **管流程的不管质量，管质量的不管流程**——orchestrator 只管调度卡点，acceptor 只管验收，不越权
+2. **执行和验收分离**——执行角色不能自己验收，必须由 acceptor 独立验收
+3. **不编造数据**——所有产出必须可追溯，测试结果必须真实
+4. **文件交接**——角色间通过指定路径的文件交接，不靠对话上下文传递
+5. **遇到阻碍先自行修复**——修复不了才上报，不轻易卡住
+6. **团队定义是稳定基础设施**——不随每次开发任务变更，只有角色职责根本性变化时才改
+
+---
+
+## 团队维护记录
+
+| 日期 | 更新内容 | 原因 |
+|------|----------|------|
+| {{DATE}} | 初始搭建，{{TEAM_SIZE}} 人{{TEAM_LEVEL}}团队 | 项目启动 |
+
+## 下次维护检查项
+
+- [ ] 路由表是否还有效（触发词是否路由到正确角色）
+- [ ] 角色职责是否和项目实际工作匹配
+- [ ] pm 的领域知识基座是否需要更新
+- [ ] 知识库是否需要沉淀新内容
+- [ ] 团队规模是否需要调整（升级/降级）
+
+> 维护触发条件和流程见 `.claude/skills/{{TEAM}}-orchestrator/references/` 下的团队维护规范。
+> 推荐配合 `neat-freak` Skill 定期跑 `/neat` 检测脑腐。
+
+---
+
+## 变更记录
+
+| 日期 | 变更 | 操作者 |
+|------|------|--------|
+| {{DATE}} | 初始团队搭建 | harness-team-builder |
+
+---
+
+> 本文件由 harness-team-builder Skill 生成。
+> 团队搭建方法论：`harness/_methodology/team-building-methodology.md`

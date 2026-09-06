@@ -1,0 +1,91 @@
+# {{MX}}-{{MY}} {{TASK}} · 总索引
+
+> 本文件是 {{MX}}-{{MY}} 任务的总索引。所有角色、并行关系、质量门、交付物以此为准。
+
+---
+
+## 一、任务目标
+
+{{GOAL}}
+
+**当前状态**：{{CURRENT_STATE}}
+
+---
+
+## 二、角色体系（基于 {{TEAM_NAME}} 团队）
+
+| 角色 | 职责 | 本任务参与度 |
+|------|------|-------------|
+| {{PREFIX}}-orchestrator | 总监：调度、卡点、异常处理 | 全程 |
+| {{PREFIX}}-pm | 产品经理：定标准、样本/方案设计 | 阶段0 |
+| {{PREFIX}}-engineer | 工程师：修配置、冒烟、环境 | 阶段0 |
+| {{PREFIX}}-app-agent | 执行主力：主测试/主开发、出报告 | 阶段1 |
+| {{PREFIX}}-qa-auditor | 质量审计：独立验收、反作弊 | 阶段2 |
+| {{PREFIX}}-research-agent | 研究员：按需支援（资料/样本） | 按需 |
+| {{PREFIX}}-modeling-agent | 建模师：按需支援（数据/模型） | 按需 |
+
+---
+
+## 三、并行关系与阶段划分
+
+```
+阶段0（并行）              阶段1（串行）               阶段2（串行）           交付
+┌──────────────┐      ┌──────────────────┐    ┌────────────────┐    ┌─────────┐
+│ {{PREFIX}}-pm │      │ {{PREFIX}}-app   │    │ {{PREFIX}}-qa  │    │ 实测报告 │
+│ 定标准+方案    │─────▶│ 主执行           │───▶│ 独立验收        │───▶│ 验收报告 │
+│ (PM.md)       │      │ +出报告          │    │ +反作弊         │    │ 总分更新 │
+├──────────────┤      │ (APP.md)         │    │ (QA.md)         │    └─────────┘
+│ {{PREFIX}}-eng│      └──────────────────┘    └────────────────┘
+│ 修配置+冒烟    │            ▲
+│ (ENG.md)      │            │
+└──────────────┘   research/modeling 按需支援
+     │
+     └── 质量门一：{{GATE1_CONDITION}}
+          │
+          └── 质量门二：{{GATE2_CONDITION}}
+               │
+               └── 质量门三：QA PASS
+```
+
+---
+
+## 四、3 道质量门
+
+| 门 | 位置 | 通过条件 |
+|----|------|----------|
+| 门一 | 阶段0→1 | {{GATE1_CONDITION}} |
+| 门二 | 阶段1→2 | {{GATE2_CONDITION}} |
+| 门三 | 阶段2→交付 | QA 出具 PASS（或有条件 PASS 且 P0 已修复） |
+
+---
+
+## 五、交付物清单
+
+| 文件 | 产出角色 | 路径 |
+|------|----------|------|
+| 00-INDEX.md（本文件） | orchestrator | `docs/internal/harness-{{MX}}/00-INDEX.md` |
+| {{MX}}-{{MY}}-LAUNCH.md | orchestrator | `docs/internal/harness-{{MX}}/{{MX}}-{{MY}}-LAUNCH.md` |
+| {{MX}}-{{MY}}-总任务书.md | pm | `docs/internal/harness-{{MX}}/{{MX}}-{{MY}}-总任务书.md` |
+| 方案/样本设计 | pm | `docs/internal/harness-{{MX}}/{{MX}}-{{MY}}-方案设计.md` |
+| 执行报告 | app-agent | `docs/internal/harness-{{MX}}/{{MX}}-{{MY}}-执行报告.md` |
+| 验收报告 | qa-auditor | `docs/internal/harness-{{MX}}/{{MX}}-{{MY}}-验收报告.md` |
+| PROGRESS.md | orchestrator | 项目根目录（运行时维护） |
+
+---
+
+## 六、相关文件
+
+| 文件 | 用途 |
+|------|------|
+| `{{MX}}-{{MY}}-总任务书.md` | 总任务：目标、验收标准、风险 |
+| `{{MX}}-{{MY}}-PM.md` | PM 指令 |
+| `{{MX}}-{{MY}}-ENG.md` | ENG 指令 |
+| `{{MX}}-{{MY}}-APP.md` | APP 指令 |
+| `{{MX}}-{{MY}}-QA.md` | QA 指令 |
+| `{{MX}}-{{MY}}-ORCH.md` | ORCH 调度指令 |
+| `{{MX}}-{{MY}}-LAUNCH.md` | Claude Code 启动入口 |
+
+---
+
+> 编制 · {{DATE}}
+> 团队：{{TEAM_NAME}}

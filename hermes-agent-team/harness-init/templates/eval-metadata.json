@@ -1,0 +1,14 @@
+{
+  "eval_id": 0,
+  "eval_name": "hermes-deep-research",
+  "prompt": "启动hermes团队，帮我深度研究'AI Agent协作模式'",
+  "assertions": [
+    "Coordinator 完成了任务拆解，生成了 01_coordinator_tasks.md",
+    "Researcher 标注了三级置信度（🟢🟡🔴），生成了 02_researcher_output.md",
+    "Writer 只使用了🟢绿色数据，生成了 03_writer_draft.md",
+    "Editor 独立进行了事实核查，生成了 04_editor_audit.md",
+    "审计结论为 PASS 或 NEEDS_FIX",
+    "最终产出在 .ai-workflow/hermes/projects/ 目录下"
+  ],
+  "notes": "验证 Hermes 五角色协作流程的完整性"
+}
