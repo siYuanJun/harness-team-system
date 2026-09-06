@@ -1,15 +1,15 @@
-# 成品案例：ontology-dome-team
+# 成品案例：ontology-brain-team
 
 > 这是用 harness-team-builder 方法论搭建的第一个垂直团队，位于本仓库：
-> `ontology-dome-team/`
+> `ontology-brain-team/`
 
 ## 团队概况
 
-- **团队名**：ontology-dome-team
+- **团队名**：ontology-brain-team
 - **领域**：本体工程师数字员工
 - **架构模式**：Pipeline + Producer-Reviewer（六环流水线，每环后 QA 独立验收）
 - **团队规模**：标准团队（7 人）
-- **角色**：dome-pm、dome-orchestrator、dome-research-agent、dome-modeling-agent、dome-app-agent、dome-qa-auditor、dome-engineer
+- **角色**：brain-pm、brain-orchestrator、brain-research-agent、brain-modeling-agent、brain-app-agent、brain-qa-auditor、brain-engineer
 
 ## 为什么是垂直团队
 

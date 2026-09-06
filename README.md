@@ -17,7 +17,7 @@ Harness Team System 是一套 **AI 多 Agent 团队搭建与任务调度体系**
 ```
 理论层                  工具层                   实例层
 ┌──────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│ _methodology/ │    │ harness-team-     │    │ ontology-dome-  │
+│ _methodology/ │    │ harness-team-     │    │ ontology-brain-  │
 │ 团队搭建方法论  │───▶│ builder           │───▶│ team            │
 │ (9步流程)      │    │ (搭团队)          │    │ (本体工程师团队)  │
 └──────────────┘    ├──────────────────┤    ├─────────────────┤
@@ -46,7 +46,7 @@ Harness Team System 是一套 **AI 多 Agent 团队搭建与任务调度体系**
 
 | 团队 | 领域 | 状态 |
 |------|------|------|
-| `ontology-dome-team` | 本体工程师数字员工（六环流水线） | ✅ 已落地，v0.3 |
+| `ontology-brain-team` | 本体工程师数字员工（六环流水线） | ✅ 已落地，v0.3 |
 | `hermes-agent-team` | 内容生产团队 | ✅ 已落地 |
 | `prd-review-team` | PRD 评审团队 | ✅ 已落地 |
 
@@ -120,7 +120,7 @@ harness/
 │   ├── SKILL.md
 │   ├── templates/                     # 8个任务指令模板
 │   └── scripts/init_milestone.sh      # 任务指令初始化脚本
-├── ontology-dome-team/                # 实例：本体工程师团队
+├── ontology-brain-team/                # 实例：本体工程师团队
 ├── hermes-agent-team/                 # 实例：内容生产团队
 └── prd-review-team/                   # 实例：PRD评审团队
 ```
@@ -163,7 +163,7 @@ AI 会自动检测当前项目的团队，生成一整套任务指令文件夹�
 - **方法论**：v1.0（9步流程）
 - **harness-team-builder**：v1.0（含 Worktree 并行、团队维护、三级规模）
 - **harness-team-mission-planner**：v1.0（含完成定义、阻碍闭环、7条红线）
-- **团队实例**：3 个（ontology-dome / hermes / prd-review）
+- **团队实例**：3 个（ontology-brain / hermes / prd-review）
 
 ## License
 

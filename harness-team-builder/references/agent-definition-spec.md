@@ -6,7 +6,7 @@
 
 ```markdown
 ---
-name: {team}-{role}          # 角色名，如 dome-pm
+name: {team}-{role}          # 角色名，如 brain-pm
 description: 一句话职责描述    # 用于路由匹配
 model: opus                  # 运行时模型指定
 ---
@@ -67,4 +67,4 @@ model: opus                  # 运行时模型指定
 
 ## 示例
 
-见 `examples/ontology-dome-team.md` 中引用的 ontology-dome-team 角色定义。
+见 `examples/ontology-brain-team.md` 中引用的 ontology-brain-team 角色定义。

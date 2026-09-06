@@ -1,12 +1,12 @@
 ---
-name: ontology-dome-team
+name: ontology-brain-team
 description: 本体工程师数字员工 Harness 团队 — 六环流水线 + 7 角色协作（产品1 + 监督1 + 执行3 + 质量1 + 工程1），输入业务文档自动产出 6 份标准本体产物（术语表 / 范围清单 / Schema / 实例库 / RAG 代码 / 评测报告）。核心铁律：管流程的不管质量。
 version: 0.3.0
 category: harness
 tags: [ontology, knowledge-graph, rag, agent-team, digital-employee]
 ---
 
-# Ontology-Dome Team · 本体工程师数字员工团队
+# Ontology-Brain Team · 本体工程师数字员工团队
 
 ## 触发场景
 
@@ -17,7 +17,7 @@ tags: [ontology, knowledge-graph, rag, agent-team, digital-employee]
 - "对这个文档做本体分析"
 - "生成术语表和 Schema"
 - "本体工程师数字员工"
-- "ontology-dome 团队"
+- "ontology-brain 团队"
 
 ---
 
@@ -30,7 +30,7 @@ tags: [ontology, knowledge-graph, rag, agent-team, digital-employee]
 - 本体建模 / 知识图谱构建
 - 业务文档 → 术语表 / Schema / 实例库 / RAG 代码 的六环流水线
 - 本体工程师数字员工相关任务
-- ontology-dome 项目及其衍生项目
+- 任何需要本体工程能力的项目
 
 ### 不适用场景（请勿使用本团队）
 
@@ -44,14 +44,14 @@ tags: [ontology, knowledge-graph, rag, agent-team, digital-employee]
 
 | 绑定项 | 说明 |
 |--------|------|
-| 角色前缀 | `dome-*`（dome-pm、dome-modeling-agent 等），绑定 ontology-dome 项目 |
+| 角色前缀 | `brain-*`（brain-pm、brain-modeling-agent 等），本示例团队的统一前缀 |
 | 核心流水线 | 本体工程六环：术语提取→概念识别→Schema设计→实例灌入→RAG接入→对比评测 |
 | 产出物 | 术语表 / 范围清单 / Schema.json / 实例库 / RAG代码 / 评测报告（本体工程特定） |
 | 质量门标准 | 泛化能力 / Schema validate PASS / RAG数字可复现（本体工程特定） |
 
 ### 如果要用于其他项目，必须改造
 
-1. **角色前缀**：`dome-*` → 项目前缀（如 `ecom-*`、`spider-*`）
+1. **角色前缀**：`brain-*` → 项目前缀（如 `ecom-*`、`spider-*`）
 2. **流水线**：六环 → 该项目的实际流程（如需求→设计→开发→测试→部署）
 3. **产出物**：本体工程产物 → 该项目的实际产物
 4. **质量门标准**：本体工程标准 → 该项目的验收标准
@@ -61,7 +61,7 @@ tags: [ontology, knowledge-graph, rag, agent-team, digital-employee]
 
 团队搭建的通用方法论：`harness/_methodology/team-building-methodology.md`
 
-本团队（ontology-dome-team）是该通用方法论的**一个垂直落地实例**，不是方法论本身。
+本团队（ontology-brain-team）是该通用方法论的**一个垂直落地实例**，不是方法论本身。
 
 ---
 
@@ -69,7 +69,7 @@ tags: [ontology, knowledge-graph, rag, agent-team, digital-employee]
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                    Ontology-Dome Team v0.3                     │
+│                    Ontology-Brain Team v0.3                     │
 ├───────────────────────────────────────────────────────────────┤
 │  产品定义层                                                   │
 │  ┌───────────────────────┐                                    │
@@ -137,21 +137,21 @@ tags: [ontology, knowledge-graph, rag, agent-team, digital-employee]
 ## 目录结构
 
 ```
-ontology-dome-team/
+ontology-brain-team/
 ├── SKILL.md                    # 本文件（主入口）
 ├── README.md                   # 详细介绍
 │
 ├── agents/                     # 角色定义（7个）
-│   ├── dome-pm.md              # 产品经理（需求→PRD/验收/优先级）
-│   ├── dome-orchestrator.md    # 总监（调度）
-│   ├── dome-research-agent.md  # 业务调研（环①②）
-│   ├── dome-modeling-agent.md  # 本体建模（环③④）
-│   ├── dome-app-agent.md       # 应用对接（环⑤⑥）
-│   ├── dome-qa-auditor.md      # QA 验收官（独立质量）
-│   └── dome-engineer.md        # 工程手（环境/git）
+│   ├── brain-pm.md              # 产品经理（需求→PRD/验收/优先级）
+│   ├── brain-orchestrator.md    # 总监（调度）
+│   ├── brain-research-agent.md  # 业务调研（环①②）
+│   ├── brain-modeling-agent.md  # 本体建模（环③④）
+│   ├── brain-app-agent.md       # 应用对接（环⑤⑥）
+│   ├── brain-qa-auditor.md      # QA 验收官（独立质量）
+│   └── brain-engineer.md        # 工程手（环境/git）
 │
 ├── skills/                     # 子 Skill
-│   └── dome-orchestrator/      # 编排流程 + 路由规则 + 质量门标准
+│   └── brain-orchestrator/      # 编排流程 + 路由规则 + 质量门标准
 │       ├── SKILL.md
 │       └── references/
 │           ├── routing-rules.md

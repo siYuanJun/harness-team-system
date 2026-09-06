@@ -1,10 +1,10 @@
-# Ontology-Dome Team · 本体工程师数字员工团队
+# Ontology-Brain Team · 本体工程师数字员工团队
 
 > 一个 Harness 团队工程：把"本体工程师"装进数字员工，六环流水线 + 7 角色协作（目标 9 角色），输入业务文档 → 产出 6 份标准本体产物。
 
 ## 是什么
 
-Ontology-Dome Team 是一个面向**本体工程领域**的 Harness 多智能体团队。它模拟一名资深本体工程师的完整工作流，从业务文档中自动提取术语、构建本体 Schema、灌入实例、接入 RAG、并完成对比评测——全程无人值守。
+Ontology-Brain Team 是一个面向**本体工程领域**的 Harness 多智能体团队。它模拟一名资深本体工程师的完整工作流，从业务文档中自动提取术语、构建本体 Schema、灌入实例、接入 RAG、并完成对比评测——全程无人值守。
 
 ### 核心定位
 
@@ -30,22 +30,22 @@ Ontology-Dome Team 是一个面向**本体工程领域**的 Harness 多智能体
 ## 目录结构
 
 ```
-ontology-dome-team/
+ontology-brain-team/
 ├── README.md              # 本文件
 ├── SKILL.md               # Harness Skill 入口定义
 ├── visualizations/        # 可视化展示文档
 │   ├── analysis-report.html   # 团队架构分析报告（工程蓝图风格）
 │   └── upgrade-plan.html      # 9 角色升级方案（工程蓝图风格）
 ├── agents/               # Agent 角色定义（7 个，已落地）
-│   ├── dome-pm.md        # 产品经理（v0.3 新增）
-│   ├── dome-orchestrator.md / dome-research-agent.md / dome-modeling-agent.md
-│   └── dome-app-agent.md / dome-qa-auditor.md / dome-engineer.md
-├── skills/               # 子 Skill 定义（dome-orchestrator 编排器，已落地）
+│   ├── brain-pm.md        # 产品经理（v0.3 新增）
+│   ├── brain-orchestrator.md / brain-research-agent.md / brain-modeling-agent.md
+│   └── brain-app-agent.md / brain-qa-auditor.md / brain-engineer.md
+├── skills/               # 子 Skill 定义（brain-orchestrator 编排器，已落地）
 ├── wiki/                 # 团队协作规范（架构铁律 + 交接协议，已落地）
 └── examples/             # 运行示例（六环流水线，已落地）
 ```
 
-> 落地方式：本目录为团队 Skill **源**；项目内副本在 `ontology-dome/.claude/`（agents + skills + CLAUDE.md），同步后两边一致。
+> 落地方式：本目录为团队定义**源模板**；使用时将本团队复制到目标项目的 `.claude/` 目录（agents + skills + CLAUDE.md），即可在该项目中启用。
 
 ## 可视化展示
 
@@ -74,7 +74,7 @@ ontology-dome-team/
 
 企业 RAG 场景中，纯向量检索的语义漂移是系统性问题——串险种、术语歧义、隐含假设缺失。本体工程是解法之一，但传统本体建模成本高、周期长、依赖专家。
 
-Ontology-Dome Team 要做的是**把本体工程的门槛打平**，让它变成一个可复制、可规模化的数字员工能力。
+Ontology-Brain Team 要做的是**把本体工程的门槛打平**，让它变成一个可复制、可规模化的数字员工能力。
 
 ## 里程碑
 
@@ -87,7 +87,7 @@ Ontology-Dome Team 要做的是**把本体工程的门槛打平**，让它变成
 
 ## 相关资源
 
-- 源项目：ontology-dome（独立项目仓库，部署时将本团队复制到目标项目的 `.claude/` 目录）
-- 领域知识库：目标项目内 `knowledge-base/` 目录
-- 通用模板：Harness 团队组建提示词-通用模板
+- 部署方式：将本团队复制到任意目标项目的 `.claude/` 目录即可启用
+- 领域知识库：目标项目内 `knowledge-base/` 目录（如有）
+- 通用方法论：`harness/_methodology/team-building-methodology.md`
 - 参考团队：[hermes-agent-team](../hermes-agent-team/) · [prd-review-team](../prd-review-team/)

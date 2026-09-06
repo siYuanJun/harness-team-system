@@ -1,14 +1,14 @@
 #!/bin/bash
 # harness-team-builder · 团队目录初始化脚本
 # 用法：./init_team.sh <团队前缀> <项目名称> [团队规模]
-# 示例：./init_team.sh dome ontology-dome standard
+# 示例：./init_team.sh dome ontology-brain standard
 # 团队规模：minimal（4人）/ standard（7人，默认）/ extended（10人）
 
 set -e
 
 if [ $# -lt 2 ]; then
   echo "用法: $0 <团队前缀> <项目名称> [团队规模]"
-  echo "示例: $0 dome ontology-dome standard"
+  echo "示例: $0 dome ontology-brain standard"
   echo "团队规模: minimal(4人) / standard(7人,默认) / extended(10人)"
   exit 1
 fi

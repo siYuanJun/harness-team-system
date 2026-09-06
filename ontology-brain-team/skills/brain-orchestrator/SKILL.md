@@ -1,6 +1,6 @@
 ---
-name: dome-orchestrator
-description: "Ontology-Dome 六环流水线编排器。用户说跑流水线/做本体建模/开始六环时触发，自动调度业务调研→本体建模→应用对接三个执行 Agent，每环经 QA 独立验收，异常兜底，最终交付全套产物。"
+name: brain-orchestrator
+description: "Ontology-Brain 六环流水线编排器。用户说跑流水线/做本体建模/开始六环时触发，自动调度业务调研→本体建模→应用对接三个执行 Agent，每环经 QA 独立验收，异常兜底，最终交付全套产物。"
 ---
 
 # Dome Orchestrator · 六环流水线编排
@@ -15,19 +15,19 @@ description: "Ontology-Dome 六环流水线编排器。用户说跑流水线/做
 - "对这个文档做本体分析"
 - "生成术语表和 Schema"
 - "本体工程师数字员工"
-- "ontology-dome 团队"
+- "ontology-brain 团队"
 
 ## 角色配置
 
 | 角色 | Agent 文件 | 职责 |
 |------|-----------|------|
-| Orchestrator（你） | dome-orchestrator.md | 调度、质量门、异常兜底、交付 |
-| PM 产品经理 | dome-pm.md | 需求→PRD / 验收标准 / 优先级 |
-| 业务调研 Agent | dome-research-agent.md | 环①② 术语+范围 |
-| 本体建模 Agent | dome-modeling-agent.md | 环③④ Schema+实例 |
-| 应用对接 Agent | dome-app-agent.md | 环⑤⑥ RAG+评测 |
-| QA 验收官 | dome-qa-auditor.md | 每环独立验收 |
-| Engineer 工程手 | dome-engineer.md | 环境/git/提交 |
+| Orchestrator（你） | brain-orchestrator.md | 调度、质量门、异常兜底、交付 |
+| PM 产品经理 | brain-pm.md | 需求→PRD / 验收标准 / 优先级 |
+| 业务调研 Agent | brain-research-agent.md | 环①② 术语+范围 |
+| 本体建模 Agent | brain-modeling-agent.md | 环③④ Schema+实例 |
+| 应用对接 Agent | brain-app-agent.md | 环⑤⑥ RAG+评测 |
+| QA 验收官 | brain-qa-auditor.md | 每环独立验收 |
+| Engineer 工程手 | brain-engineer.md | 环境/git/提交 |
 
 ## 工作流
 
@@ -115,4 +115,4 @@ QA 验收内容：
 - `references/routing-rules.md` — 详细路由规则
 - `references/quality-gates.md` — 质量门详细标准
 - `references/handoff-protocols.md` — 角色交接协议
-- 各角色完整定义：项目根 `.claude/agents/`（dome-orchestrator / dome-research-agent / dome-modeling-agent / dome-app-agent / dome-qa-auditor / dome-engineer）
+- 各角色完整定义：项目根 `.claude/agents/`（brain-orchestrator / brain-research-agent / brain-modeling-agent / brain-app-agent / brain-qa-auditor / brain-engineer）

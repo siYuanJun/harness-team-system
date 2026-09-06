@@ -1,6 +1,6 @@
 ---
 name: harness-team-mission-planner
-description: 为 Harness 多 Agent 团队体系生成里程碑任务指令文件夹。当用户需要为某个 Harness 团队（如 ontology-dome-team）规划一个里程碑任务并产出一整套可执行的角色指令（PM/ENG/APP/QA/ORCH + LAUNCH 启动入口）时使用。输入是里程碑需求描述，输出是 docs/internal/harness-Mx/ 下的完整任务指令文件夹。非 test harness，是多 Agent 团队任务指令生成器。
+description: 为 Harness 多 Agent 团队体系生成里程碑任务指令文件夹。当用户需要为某个 Harness 团队（如 ontology-brain-team）规划一个里程碑任务并产出一整套可执行的角色指令（PM/ENG/APP/QA/ORCH + LAUNCH 启动入口）时使用。输入是里程碑需求描述，输出是 docs/internal/harness-Mx/ 下的完整任务指令文件夹。非 test harness，是多 Agent 团队任务指令生成器。
 ---
 
 # Harness Team Mission Planner
@@ -28,7 +28,7 @@ description: 为 Harness 多 Agent 团队体系生成里程碑任务指令文件
 ### 第二步：团队检测与匹配
 - 检查当前项目是否有 `.claude/agents/` 目录
 - 有 → 读取角色定义，用当前项目的团队
-- 没有 → 检查 `harness/` 下是否有可用团队源目录（如 ontology-dome-team、hermes-agent-team），列出让用户指定
+- 没有 → 检查 `harness/` 下是否有可用团队源目录（如 ontology-brain-team、hermes-agent-team），列出让用户指定
 - 如果 `harness/` 下也没有合适的团队，或用户想为当前项目**新建团队** → 停止生成任务指令，明确提示用户：
   > 当前项目没有 Harness 团队。请先用团队搭建方法论创建团队：
   > 见本仓库 `_methodology/team-building-methodology.md`
@@ -42,7 +42,7 @@ description: 为 Harness 多 Agent 团队体系生成里程碑任务指令文件
 
 ### 第四步：生成各角色指令
 - 每个角色指令包含：任务 / 交付物 / 具体要求 / 验收标准 / 工作方式 / 记住
-- 角色名用目标团队的实际名称（如 dome-pm、hermes-reviewer）
+- 角色名用目标团队的实际名称（如 brain-pm、hermes-reviewer）
 - PM：定标准 + 样本/方案设计
 - ENG：修配置 + 冒烟
 - APP：主执行 + 出报告

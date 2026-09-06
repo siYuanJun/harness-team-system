@@ -150,4 +150,4 @@ harness-team-mission-planner（派任务）
 - `references/quality-gates.md` — 搭建质量门标准
 - `templates/` — 角色定义、编排器、CLAUDE.md 模板
 - `scripts/init_team.sh` — 团队目录初始化脚本
-- `examples/ontology-dome-team.md` — 成品案例
+- `examples/ontology-brain-team.md` — 成品案例

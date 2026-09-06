@@ -124,4 +124,4 @@
 - **Fan-out + Producer-Reviewer**：并行生成，每个都有审校
 - **Pipeline + Fan-out**：某一环内部并行（如 Schema 设计环内，多个领域并行）
 
-ontology-dome-team 用的是 **Pipeline + Producer-Reviewer**：六环流水线，每环后有 QA 独立验收。
+ontology-brain-team 用的是 **Pipeline + Producer-Reviewer**：六环流水线，每环后有 QA 独立验收。
