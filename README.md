@@ -127,33 +127,39 @@ harness/
 
 ## 使用方法
 
+本体系的所有操作都由 **AI 执行**，人只需要说一句话。
+
 ### 搭建一个新团队
 
-```bash
-# 1. 进入项目目录
-cd your-project
+对 AI 说：
 
-# 2. 用 harness-team-builder 的初始化脚本创建骨架
-/path/to/harness-team-builder/scripts/init_team.sh <团队前缀> <项目名> standard
+> "用 harness-team-builder 给这个项目搭个团队，项目是做 [XX] 的"
 
-# 3. 按 SKILL.md 的 9 步流程填充角色定义、路由表、编排器
-```
+AI 会自动执行完整流程：
+1. 目标七问澄清需求
+2. 选型团队架构模式
+3. 交互式选择角色（最小/标准/扩展）
+4. 生成角色定义、编排器、CLAUDE.md
+5. 质量门自检
+6. 部署到项目的 `.claude/` 目录
 
-或直接对 AI 说：**"用 harness-team-builder 给这个项目搭个团队"**
+> `init_team.sh` 是 AI 内部使用的骨架生成脚本，不需要人手动运行。
 
 ### 给已有团队派任务
 
-对 AI 说：**"用 harness-team-mission-planner 生成 M4 的任务指令，需求是：[你的需求]"**
+对 AI 说：
 
-AI 会自动检测当前项目的团队，生成一整套任务指令文件夹。
+> "用 harness-team-mission-planner 生成 M4 的任务指令，需求是：[你的需求]"
+
+AI 会自动检测当前项目的团队，生成一整套任务指令文件夹（含总索引、各角色指令、LAUNCH 启动入口）。
 
 ### 让 Claude Code 执行任务
 
-把生成的 `Mx-My-LAUNCH.md` 丢给 Claude Code，它会扮演 orchestrator 调度团队执行。
+把生成的 `Mx-My-LAUNCH.md` 丢给 Claude Code，它会扮演 orchestrator 调度团队成员并行执行。
 
 ## 当前状态
 
-- **仓库状态**：私有（筹备开源中）
+- **仓库状态**：公开
 - **方法论**：v1.0（9步流程）
 - **harness-team-builder**：v1.0（含 Worktree 并行、团队维护、三级规模）
 - **harness-team-mission-planner**：v1.0（含完成定义、阻碍闭环、7条红线）
